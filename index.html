@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elections Activity</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="activities.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid gray;
+        border-collapse: collapse;
+      }
+      td:nth-child(5),
+      td:nth-child(6),
+      td:nth-child(7) {
+        text-align: right;
+      }
+
+      #error {
+        color: red;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Elections Activity</h1>
+
+    <div id="error"></div>
+
+    <div>
+      <div>
+        <label for="region-list">Ŗegion:</label>
+        <select id="region-list">
+          <option value="">All</option>
+        </select>
+      </div>
+      <div>
+        <label for="polling-list">Polling station:</label>
+        <select id="polling-list"></select>
+      </div>
+      <div>
+        <label for="vote-from">Voters from:</label>
+        <input type="text" id="vote-from" />
+      </div>
+      <div>
+        <label for="vote-until">Voters until:</label>
+        <input type="text" id="vote-until" />
+      </div>
+      <div>
+        <label for="total">Total</label>
+        <input type="radio" id="total" name="indicator" value="total" checked />
+        <label for="elect-day">Voted on election day</label>
+        <input type="radio" id="elect-day" name="indicator" value="elect-day" />
+      </div>
+      <div>
+        <label for="search">Polling station search:</label>
+        <input type="search" id="search" />
+      </div>
+      <div id="buttons">
+        <button id="show-stats">Show statistics</button>
+      </div>
+      <table>
+        <!--EXAMPLE START-->
+        <!--This is an example result. The example should be removed in the final homework solution. -->
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Total Voters</th>
+            <th>Vote Count</th>
+            <th>Percentage Voted</th>
+          </tr>
+        </thead>
+        <tbody id="t-body"></tbody>
+        <!-- <tr>
+          <td>Riga</td>
+          <td>RĪGAS VALSTS 3. ĢIMNĀZIJA</td>
+          <td>Grēcinieku iela 10, Rīga</td>
+          <td>1318</td>
+          <td>615</td>
+          <td>46.66%</td>
+        </tr>
+        <tr>
+          <td>Riga</td>
+          <td>RĪGAS 34. VIDUSSKOLA</td>
+          <td>Vircavas iela 7, Rīga</td>
+          <td>3326</td>
+          <td>1285</td>
+          <td>38.63%</td>
+        </tr> -->
+        <!--EXAMPLE END-->
+      </table>
+    </div>
+
+    <script src="./activities.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
